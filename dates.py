@@ -13,7 +13,7 @@ from secrets import token
 g = Github("username","password")
 repo = g.get_repo('repo')
 date = repo.updated_at
-date = int(2017-5-2)
+date = int(2020-5-2)
 print(date)
 
 
