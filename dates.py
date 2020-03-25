@@ -14,6 +14,21 @@ r = requests.get("https://api.github.com/repos/Itumeleng091slk/pulls")
 len(r.json()) == 13
 print(r)
 
+def daterange(start_date, end_date):
+    for n in range(int((end_date - start_date).days)):
+        yield start_date + timedelta(n)
+
+start_date = date(2020, 1, 12)
+end_date = date(2020, 3, 5)
+
+for single_date in daterange(start_date,end_date):
+    date_obj = datetime.combine(single_date,datetime.min.time())
+    print(single_date.strftime('%Y-%m-%d:'), 'repo.name')
+
+# def created_at(self):
+#     self._completedIfNotSet(self.created_at)
+#     return self.created_at.value
+  
 # g = Github("username","password")
 # repo = g.get_repo('repo')
 # date = repo.updated_at
