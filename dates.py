@@ -10,19 +10,19 @@ from secrets import username
 from secrets import password
 from secrets import token
 
-g = Github("username","password")
-repo = g.get_repo('repo')
-date = repo.updated_at
-date = int(2020-5-2)
-print(date)
+r = requests.get("https://api.github.com/repos/Itumeleng091slk/pulls")
+len(r.json()) == 13
+print(r)
 
-
-
+# g = Github("username","password")
+# repo = g.get_repo('repo')
+# date = repo.updated_at
+# date = int(2020-5-2)
+# print(date)
 # for pull in r.get_pulls('all'):
 #     print(get_pull)
 # parameters = {"sort": 'pushed'}
-# r = requests.get("https://github.com/Itumeleng091slk/Mock_and_Spies.git",params=parameters)
-# len(r.json()) == 13
+
 # for item in resp['updated_at']:
 #     print(item['updated_at'])
 # def daterange(start_date, end_date):
