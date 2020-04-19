@@ -1,9 +1,9 @@
 import requests
 from datetime import date
 
-# pull_requests = requests.get("https://api.github.com/repos/Umuzi-org/tech-department/pulls?id=1")
+pull_requests = requests.get("https://api.github.com/repos/Umuzi-org/tech-department/pulls?id=1")
 
-# print(pull_requests.json())
+print(pull_requests.json())
 
 def pull_requests(owner, repo_name, start_date, end_date):
   pull_requests = requests.get(f"https://api.github.com/repos/{owner}/{repo_name}/pulls?id=1")
