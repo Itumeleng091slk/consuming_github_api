@@ -1,14 +1,9 @@
 import github
 
+def pull_request(owner, repo_name, start_date, end_date):
+    return pull_requests.json()
 pull_requests = requests.get("https://api.github.com/repos/Umuzi-org/tech-department/pulls/338/commits")
 print(pull_requests.json())
-
-def pull_requests(owner, repo_name, start_date, end_date):
-
-  pull_requests = requests.get(f"https://api.github.com/repos/{owner}/{repo_name}/pulls?id=434")
-  return pull_requests
-
-print(dir(pull_requests("Umuzi-org","tech-department",18-3-2018,18-4-2020)))
 
 x = {
   'created_at': 2018,
