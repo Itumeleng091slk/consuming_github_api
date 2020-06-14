@@ -1,8 +1,11 @@
 import github
 
+user = "Umuzi-org"
+repo = "tech-department"
+
 def pull_request(owner, repo_name, start_date, end_date):
     return pull_requests.json()
-pull_requests = requests.get("https://api.github.com/repos/Umuzi-org/tech-department/pulls/338/commits")
+pull_requests = requests.get(f"https://api.github.com/repos/{user}/{repo}/pulls/338/commits")
 print(pull_requests.json())
 
 x = {
