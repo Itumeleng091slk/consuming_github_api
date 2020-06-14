@@ -1,7 +1,5 @@
 import github
-
-user = "Umuzi-org"
-repo = "tech-department"
+from credentails user, repo
 
 def pull_request(owner, repo_name, start_date, end_date):
     return pull_requests.json()
